@@ -1,4 +1,3 @@
-console.log("js is loading")
 
 const fetchWeather = (location) =>
 {
