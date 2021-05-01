@@ -1,7 +1,7 @@
 
 const fetchWeather = (location) =>
 {
-    fetch(`http://localhost:3000/weather?address=${location}`).then((reponse)=>{
+    fetch(`/weather?address=${location}`).then((reponse)=>{
         reponse.json().then((data)=>{
             if(data.error)
                 messaheOne.textContent =  data.error
