@@ -10,6 +10,7 @@ const fetchWeather = (location) =>
                 messaheOne.textContent = data.location
                 messaheTwo.textContent = data.forecast
                 messaheThree.textContent = data.temp
+                messaheFour.textContent = data.humidity
             }
 
         })
@@ -22,6 +23,7 @@ const search = document.querySelector('input')
 const messaheOne = document.querySelector('#message-1')
 const messaheTwo = document.querySelector('#message-2')
 const messaheThree = document.querySelector('#message-3')
+const messaheFour = document.querySelector('#message-4')
 
 
 weatherForm.addEventListener('submit',(e)=>{
@@ -29,6 +31,7 @@ weatherForm.addEventListener('submit',(e)=>{
     messaheOne.textContent = 'Loading.....'
     messaheTwo.textContent = ''
     messaheThree.textContent = ''
+    messaheFour.textContent = ''
     const location = search.value
     fetchWeather(location)
 

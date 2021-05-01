@@ -76,6 +76,7 @@ app.get('/weather',(req,res) =>
             return res.send( {
                 forecast : forecateData.first,
                 temp : forecateData.second,
+                humidity : forecateData.humidity,
                 location ,
                 address :req.query.address
                 
