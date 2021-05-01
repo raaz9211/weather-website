@@ -74,7 +74,8 @@ app.get('/weather',(req,res) =>
                 return  res.send({error})
         
             return res.send( {
-                forecast : forecateData,
+                forecast : forecateData.first,
+                temp : forecateData.second,
                 location ,
                 address :req.query.address
                 
