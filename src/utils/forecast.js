@@ -10,7 +10,7 @@ const forecast = (longitude,latitude,callback) =>
             callback('Unable to find location',undefined)
         else
             callback(undefined,{
-                first : `${response.body.current.weather[0].description[0].toUpperCase()}${response.body.daily[0].weather[0].description.slice(1)}. It is currently ${Math.round(response.body.current.temp - 273.15)} \xB0C degree out.`,
+                first : `${response.body.current.weather[0].description[0].toUpperCase()}${response.body.daily[0].weather[0].description.slice(1)}. It is currently ${Math.round(response.body.current.temp - 273.15)} \xB0C out.`,
                 second : `Temp : High ${Math.round(response.body.daily[0].temp.max - 273.15)} \xB0C and Low ${Math.round(response.body.daily[0].temp.min - 273.15)} \xB0C `,
                 humidity :   `Humidity : ${response.body.current.humidity}`
     })

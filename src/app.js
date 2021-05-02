@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs  = require('hbs')
 
+
 const app = express()
 
 const port = process.env.PORT || 3000
@@ -13,6 +14,8 @@ const forecast = require('./utils/forecast')
 const publicDirectoryPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
+
+
 
 
 //Setup handlebars engine and views location
@@ -50,7 +53,7 @@ app.get('/help',(req,res) =>
         name : 'Raj'
     })
 })
-
+  
 
 
 app.get('/weather',(req,res) =>
